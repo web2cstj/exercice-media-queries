@@ -17,19 +17,3 @@ body {
     ASIDE
         - Largeur 30%
   -------------------------------------- */
-div.interface {
-    width: calc(100% - 200px);
-}
-
-main {
-    width: 70%;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-article.troisieme {
-    grid-column: initial;
-}
-
-aside {
-    width: 30%;
-}

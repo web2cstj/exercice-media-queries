@@ -18,17 +18,3 @@ body {
     TTROISIÈME ARTICLE
         - Étendre sur les deux colonnes
 -------------------------------------- */
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-article.infos {
-    margin-bottom: 0;
-}
-
-article.troisieme {
-    grid-column: 1 / span 2;
-}
