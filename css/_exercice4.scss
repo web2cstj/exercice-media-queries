@@ -1,99 +1,7 @@
-@import "variables";
-@import "reset";
-@import "boilerplate";
-
-header {
-    background-color: var(--gris-pale);
+body {
+    width: 1024px;
+    margin: 0 auto;
 }
-
-header,
-.infos {
-    margin-bottom: 1rem;
-    padding: 1em;
-}
-
-.infos {
-    background: var(--mauve);
-}
-
-aside {
-    background: var(--jaune);
-    padding: 1em;
-}
-
-h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-
-/*--------------------------------------
-    BREAKPOINT 1 - 512px
-    Le MAIN :
-        - Affichage en grid
-        - Deux colonnes, de largeur égale
-        - Espace entre les colones : 16px (en rem)
-        - Marges ext. bas : 16px (en rem)
-
-    Articles ayant la classe "INFOS"
-        - Enlever les marges ext. bas
-
-    TTROISIÈME ARTICLE
-        - Étendre sur les deux colonnes
--------------------------------------- */
-@media screen and (min-width: 512px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    article.infos {
-        margin-bottom: 0;
-    }
-
-    article.troisieme {
-        grid-column: 1 / span 2;
-    }
-
-}
-
-
-/*--------------------------------------
-    BREAKPOINT 2 - 650px
-    DIV ayant la classe "INTERFACE"
-        - Pleine largeur, moins 50px de chaque côté
-        - Centré horizontalement
-  -------------------------------------- */
-@media screen and (min-width: 650px) {
-    div.interface {
-        width: calc(100% - 100px);
-        margin: 0 auto;
-    }
-}
-
-
-/*--------------------------------------
-    BREAKPOINT 3 - 768px
-    DIV ayant la classe "INTERFACE"
-        - Items imbriqués sont placés côte-à-côte
-
-    MAIN
-        - Marge ext. droite : 16px (en REM)
-        - Enlever l'espace de trop dans le bas
-  -------------------------------------- */
-@media screen and (min-width: 768px) {
-    div.interface {
-        display: flex;
-    }
-
-    main {
-        margin-right: 1rem;
-        margin-bottom: 0;
-    }
-}
-
 /*--------------------------------------
     BREAKPOINT 4 - 1024px
     DIV ayant la classe "INTERFACE"
@@ -103,27 +11,25 @@ h1 {
         - Largeur de 70%
         - Grille à 3 colonnes, de largeur égale
 
-    TOISIEME ARTICLE
+    TROISIEME ARTICLE
         - S'étend sur une seule colonne (valeur initiale)
     
     ASIDE
         - Largeur 30%
   -------------------------------------- */
-@media screen and (min-width: 1024px) {
-    div.interface {
-        width: calc(100% - 200px);
-    }
+div.interface {
+    width: calc(100% - 200px);
+}
 
-    main {
-        width: 70%;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+main {
+    width: 70%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-    article.troisieme {
-        grid-column: initial;
-    }
+article.troisieme {
+    grid-column: initial;
+}
 
-    aside {
-        width: 30%;
-    }
+aside {
+    width: 30%;
 }

@@ -1,5 +1,4 @@
 @import "variables";
-@import "reset";
 @import "boilerplate";
 
 header {
@@ -61,18 +60,17 @@ h1 {
 
 
 /*--------------------------------------
-    BREAKPOINT 2 - 650px
+    BREAKPOINT 2 - 640px
     DIV ayant la classe "INTERFACE"
         - Pleine largeur, moins 50px de chaque côté
         - Centré horizontalement
   -------------------------------------- */
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 640px) {
     div.interface {
         width: calc(100% - 100px);
         margin: 0 auto;
     }
 }
-
 
 /*--------------------------------------
     BREAKPOINT 3 - 768px
